@@ -1,0 +1,44 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    margin: 0;
+}
+
+#container h1{
+    text-align: center;
+}
+
+#container #FAQ-section{
+    width: 600px;
+    box-shadow: 0 0 5px #aaa9a9;
+    padding: 20px;
+    margin: 0px auto;
+}
+
+.FAQ-title{
+    padding: 15px;
+    background-color: #f3f1f1;
+    margin-bottom: 7px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.FAQ-title:hover{
+    background-color: #c5c5c5;
+    cursor: pointer;
+}
+.FAQ-message{
+    padding: 10px;
+    display: none;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    box-shadow: 0 0 2px #c5c5c5 ;
+    margin-bottom: 10px;
+}
+
+/* for JS */
+
+.visible{
+    display: block;
+}
