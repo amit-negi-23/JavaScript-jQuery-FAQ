@@ -14,6 +14,7 @@ body{
     box-shadow: 0 0 5px #aaa9a9;
     padding: 20px;
     margin: 0px auto;
+    border-radius: 8px;
 }
 
 .FAQ-title{
