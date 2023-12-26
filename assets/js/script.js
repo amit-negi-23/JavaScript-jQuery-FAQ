@@ -30,8 +30,18 @@
     let allarrow = document.querySelectorAll(".fa-angle-down")
 
     for(faq of faqs){
+        
         faq.addEventListener('click',function(){
-            this.parentElement.children[1].classList.toggle
-            ('visible')
+            for(faqmsg of faqMsgs){
+                faqmsg.classList.remove('visible')
+            }
+            for(arrow of allarrow){
+                arrow.classList.remove('fa-angle-up')
+            }
+           this.parentElement.children[1].classList.toggle('visible')
+            this.children[0].classList.toggle('fa-angle-up')
+            
         })
     }
+
+    

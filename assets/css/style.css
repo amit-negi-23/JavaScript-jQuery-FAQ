@@ -45,6 +45,6 @@ body{
 /* for JS */
 
 .visible{
-    height: auto;
-    transition: 2s;
+    transition:height 0.5s linear 0s;
+    height: 120px;
 }
