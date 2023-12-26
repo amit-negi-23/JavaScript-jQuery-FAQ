@@ -30,16 +30,21 @@ body{
     cursor: pointer;
 }
 .FAQ-message{
-    padding: 10px;
-    display: none;
+    overflow: hidden;
+    height: 0;
     font-size: 0.8em;
     line-height: 1.5em;
     box-shadow: 0 0 2px #c5c5c5 ;
     margin-bottom: 10px;
 }
 
+.FAQ-message .msg-content{
+    padding: 10px;
+}
+
 /* for JS */
 
 .visible{
-    display: block;
+    height: auto;
+    transition: 2s;
 }
