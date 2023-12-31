@@ -1,3 +1,27 @@
+    let faqs = document.querySelectorAll(".FAQ-title")
+    let faqMsgs=document.querySelectorAll(".FAQ-message")
+    let arrows = document.querySelectorAll(".fa-angle-down")
+
+    faqs.forEach(function(faq){
+        faq.addEventListener('click',function(){
+            let arr = this.firstElementChild;
+            console.log(arr)
+            let faqmsg =this.nextElementSibling;
+            if(faqmsg.classList.contains('visible')){
+                faqmsg.classList.remove('visible')
+                arr.classList.remove('fa-angle-up')
+            }else{
+                faqMsgs.forEach((faqmsg)=>{faqmsg.classList.remove('visible')})
+                arrows.forEach((arr)=>{arr.classList.remove('fa-angle-up')})
+                faqmsg.classList.add('visible')
+                arr.classList.add('fa-angle-up')
+            }
+            })
+    })
+
+
+
+
 
     // let faq = document.querySelectorAll(".FAQ-title")
     // let faqMessage=document.querySelectorAll(".FAQ-message")
@@ -6,42 +30,39 @@
 
     // for(let i=0; i<faq.length;i++){
     //     faq[i].addEventListener('click',function(){
-
-            
-    //         if(faqMessage[i].classList.contains('hidden')){
-    //             faqMessage[i].classList.remove('hidden')
-    //             faqMessage[i].classList.add('visible')
-    //             arrow[i].classList.remove('fa-angle-down')
-    //             arrow[i].classList.add('fa-angle-up')
+    //         if(faqMessage[i].classList.contains('visible')){
+    //             faqMessage[i].classList.remove('visible')
+    //             arrow[i].classList.add('fa-angle-down')
+    //             arrow[i].classList.remove('fa-angle-up')
+    //             // console.log("click")
                
     //         }
-    //         else if(faqMessage[i].classList.contains('visible')){
-    //             faqMessage[i].classList.remove('visible')
-    //             faqMessage[i].classList.add('hidden')
-    //             arrow[i].classList.remove('fa-angle-up')
-    //             arrow[i].classList.add('fa-angle-down')
+    //         else{
+    //             faqMessage[i].classList.add('visible')
+    //             arrow[i].classList.add('fa-angle-up')
+    //             arrow[i].classList.remove('fa-angle-down')
     //         }
     //     })
     // }
 
 
-    let faqs = document.querySelectorAll(".FAQ-title");
-    let faqMsgs = document.querySelectorAll(".FAQ-message")
-    let allarrow = document.querySelectorAll(".fa-angle-down")
+    // let faqs = document.querySelectorAll(".FAQ-title");
+    // let faqMsgs = document.querySelectorAll(".FAQ-message")
+    // let allarrow = document.querySelectorAll(".fa-angle-down")
 
-    for(faq of faqs){
-        
-        faq.addEventListener('click',function(){
-            for(faqmsg of faqMsgs){
-                faqmsg.classList.remove('visible')
-            }
-            for(arrow of allarrow){
-                arrow.classList.remove('fa-angle-up')
-            }
-           this.parentElement.children[1].classList.toggle('visible')
-            this.children[0].classList.toggle('fa-angle-up')
-            
-        })
-    }
 
-    
+    //     faqs.forEach(function(faq){
+    //         faq.addEventListener('click',function(){
+    //             if(this.parentElement.children[1].classList.contains('visible')){
+    //                 this.parentElement.children[1].classList.remove('visible')
+    //                 this.children[0].classList.remove('fa-angle-up')
+
+    //             }else{
+    //                 this.parentElement.children[1].classList.toggle('visible')
+    //                 this.children[0].classList.toggle('fa-angle-up')
+
+    //             }
+           
+
+    //         })
+    //     })
