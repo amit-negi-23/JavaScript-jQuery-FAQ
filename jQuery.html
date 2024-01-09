@@ -102,9 +102,12 @@
             $('.FAQ-title').click(function(){
                 if($(this).parent().hasClass('opened')){
                     $(this).parent().removeClass('opened')
+                    $(this).children("i").removeClass("fa-angle-up")
                 }else{
                     $('.FAQ.opened').removeClass('opened');
                     $(this).parent().addClass('opened')
+                    $('.FAQ-title').children("i").removeClass("fa-angle-up")
+                    $(this).children("i").addClass("fa-angle-up")
                 }
             })
         })
